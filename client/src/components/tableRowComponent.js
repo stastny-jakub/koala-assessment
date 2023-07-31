@@ -35,7 +35,7 @@ const TableRowComponent = ({row, tableHeadLength}) => {
             {Object.keys(row.data).map(property => (
                 <td key={property}>{row.data[property]}</td>
             ))}
-            <td onClick={() => {
+            <td title="Smazat" onClick={() => {
                 handleDelete(row.data.ID)
             }} style={{color: "red"}}>X
             </td>

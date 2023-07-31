@@ -28,8 +28,8 @@ function deleteItemById(items, parent = null, id) {
                 parent.children["has_nemesis"].records.splice(key, 1) :
                 parent.children["has_secrete"].records.splice(key, 1)
         }
-        if (item.children["has_nemesis"]) deleteItemById(item.children["has_nemesis"].records, item, id);
-        if (item.children["has_secrete"]) deleteItemById(item.children["has_secrete"].records, item, id);
+        if (item.children["has_nemesis"]) return deleteItemById(item.children["has_nemesis"].records, item, id);
+        if (item.children["has_secrete"]) return deleteItemById(item.children["has_secrete"].records, item, id);
     })
 }
 

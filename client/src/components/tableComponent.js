@@ -29,7 +29,7 @@ export let TableComponent = ({data, ref = null}) => {
             </tr>
             </thead>
             {data.length > 0 && data.map((item, key) => (
-                <TableRowComponent row={item} tableHeadLength={getTableHeadLength()}/>
+                <TableRowComponent key={key} row={item} tableHeadLength={getTableHeadLength()}/>
             ))}
         </table>
     )
