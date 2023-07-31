@@ -1,0 +1,36 @@
+table {
+  border-collapse: collapse;
+  thead {
+    background-color: $primary;
+    tr {
+      th {
+        font-weight: bold;
+        color: $dark;
+        padding: 5px 10px;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        color: $light;
+        &:not(.nested) {
+          padding: 5px 10px;
+        }
+        table {
+          margin-left: 50px;
+        }
+        & > .child-table {
+          height: 0;
+          overflow: hidden;
+        }
+      }
+    }
+    &:nth-child(odd) {
+      background-color: $dark;
+    }
+    &:nth-child(even) {
+      background-color: $dark_80;
+    }
+  }
+}
